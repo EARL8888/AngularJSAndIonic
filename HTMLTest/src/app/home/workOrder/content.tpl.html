@@ -1,0 +1,65 @@
+<ion-view class="workOrderStyle">
+    <div ng-class="{tabTopAndroid:showTabStyle,tabTopIOS:!showTabStyle}">
+        <ul>
+            <li ng-class="{'active':sortShow == 0}" ng-click="changeItem(0);">户内报修</li>
+            <span class="borderRight"></span>
+            <li ng-class="{'active':sortShow == 1}" ng-click="changeItem(1);">公区报修</li>
+        </ul>
+    </div>
+    <ion-content has-bouncing="false" scrollbar-y="false" class="itm">
+        <div ng-if="sortShow == 0">
+            <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+            </ion-refresher>
+            <ion-list>
+                <div ng-class="{listBottomHeightAndroid:showTabStyle,listBottomHeightIOS:!showTabStyle}">
+                    <ion-item class="com_list" ng-repeat="item in data">
+                        <!-- <a href="/workOrderDetails/{{item.id}}"> -->
+                        <div>
+                            <div class="hardInfo">
+                                <span class="left" ng-class="{yellow:item.type=='户内'}">[{{item.type}}] 工单单号： {{item.id}}</span>
+                                <span class="right">{{item.owner}}</span>
+                            </div>
+                            <div class="content">
+                                <span>{{ item.content | characters:50}}</span>
+                            </div>
+                            <div class="infoBar">
+                                <p class="left">{{item.createDate}}</p>
+                                <p class="right">{{item.address}}</p>
+                            </div>
+                        </div>
+                        <!-- </a> -->
+                    </ion-item>
+                </div>
+            </ion-list>
+            <ion-infinite-scroll ng-if="pageInfo.hasNextPage" on-infinite="loadMore()" distance="1%" immediate-check="false">
+            </ion-infinite-scroll>
+        </div>
+        <div ng-if="sortShow == 1">
+            <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefreshTwo()">
+            </ion-refresher>
+            <ion-list>
+                <div ng-class="{listBottomHeightAndroid:showTabStyle,listBottomHeightIOS:!showTabStyle}">
+                    <ion-item class="com_list" ng-repeat="item in dataTwo">
+                        <!-- <a href="/workOrderDetails/{{item.id}}"> -->
+                        <div>
+                            <div class="hardInfo">
+                                <span class="left" ng-class="{red:item.type=='公区'}">[{{item.type}}] 工单单号： {{item.id}}</span>
+                                <span class="right">{{item.owner}}</span>
+                            </div>
+                            <div class="content">
+                                <span>{{ item.content | characters:50}}</span>
+                            </div>
+                            <div class="infoBar">
+                                <p class="left">{{item.createDate}}</p>
+                                <p class="right">{{item.address}}</p>
+                            </div>
+                        </div>
+                        <!-- </a> -->
+                    </ion-item>
+                </div>
+            </ion-list>
+            <ion-infinite-scroll ng-if="pageInfoTwo.hasNextPage" on-infinite="loadMoreTwo()" distance="1%" immediate-check="false">
+            </ion-infinite-scroll>
+        </div>
+    </ion-content>
+</ion-view>

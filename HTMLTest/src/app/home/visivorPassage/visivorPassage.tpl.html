@@ -1,0 +1,14 @@
+<ion-view>
+    <ion-nav-buttons side="right">
+        <a href="/visivorPassageHis">
+            <button class="button">访客记录</button>
+        </a>
+    </ion-nav-buttons>
+    <ion-nav-title>访客通行</ion-nav-title>
+    <div ng-if="showTabWeixiu" ng-include="'home/tab/weixiutab/weiXiuTab.tpl.html'">
+    </div>
+    <div ng-if="showTabBaojie" ng-include="'home/tab/baojietab/baojieTab.tpl.html'">
+    </div>
+    <div ng-if="showTabBaoan" ng-include="'home/tab/tab.tpl.html'">
+    </div>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view class="cleanWorkOrderStyle">
+    <ion-content has-bouncing="false" scrollbar-y="false" class="itm">
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list>
+            <div class="listBottomHeight">
+                <ion-item class="com_list" ng-repeat="item in data">
+                    <div>
+                        <div class="hardInfo">
+                            <span class="left">工单单号： {{item.id}}</span>
+                            <span class="right">{{item.owner}}</span>
+                        </div>
+                        <div class="content">
+                            <span>{{ item.content | characters:50}}</span>
+                        </div>
+                        <div class="infoBar">
+                            <p class="left">{{item.createDate}}</p>
+                            <p class="right">{{item.address}}</p>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll ng-if="pageInfo.hasNextPage" on-infinite="loadMore()" distance="1%" immediate-check="false">
+    </ion-content>
+</ion-view>

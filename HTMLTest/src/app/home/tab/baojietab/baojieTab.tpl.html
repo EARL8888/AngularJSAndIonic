@@ -1,0 +1,13 @@
+<ion-view ng-controller="HomeTabController">
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive tabs-icon-only footTabs">
+        <ion-tab title="" icon-off="ion-index" icon-on="ion-index-active" ng-click="goTab('home/index')" href="/home/index">
+            <ion-view ng-include="getContentTpl('home/index')" ng-if="isActived('home/index')"></ion-view>
+        </ion-tab>
+        <ion-tab title="" icon-off="ion-groupBuy_baojie" icon-on="ion-groupBuy-active_baojie" ng-click="goTab('home/cleanWorkOrder')" href="/home/cleanWorkOrder">
+            <ion-view ng-include="getContentTpl('home/cleanWorkOrder')" ng-if="isActived('home/cleanWorkOrder')"></ion-view>
+        </ion-tab>
+        <ion-tab title="" icon-off="ion-mine_weixiu" icon-on="ion-mine-active_weixiu" ng-click="goTab('home/mineWork')" href="/home/mineWork">
+            <ion-view ng-include="getContentTpl('home/mineWork')" ng-if="isActived('home/mineWork')"></ion-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>

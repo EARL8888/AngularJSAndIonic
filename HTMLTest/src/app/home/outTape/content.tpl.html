@@ -1,0 +1,28 @@
+<ion-view class="outTapeStyle">
+    <ion-content has-bouncing="false" scrollbar-y="false" class="itm">
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list>
+            <div class="listBottomHeight">
+                <ion-item class="com_list" ng-repeat="item in data">
+<!--                     <a href="/outTapeDetails/{{item.id}}"> -->
+                        <div>
+                            <div class="hardInfo">
+                                <span class="left">{{item.ownerName}} 出门条</span>
+                                <span class="right">出门时间：{{item.leaveTime}}</span>
+                            </div>
+                            <div class="content">
+                                <span>{{ item.carNumber | characters:15}}</span>
+                            </div>
+                            <div class="infoBar">
+                                <p class="left">{{item.createTime}}</p>
+                            </div>
+                        </div>
+                    <!-- </a> -->
+                </ion-item>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll ng-if="pageInfo.hasNextPage" on-infinite="loadMore()" distance="0.5%" immediate-check="false">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

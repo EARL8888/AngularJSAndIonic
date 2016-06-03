@@ -1,0 +1,33 @@
+<ion-view class="WorkStyle">
+    <ion-content has-bouncing="false" scrollbar-y="false">
+        <div class="banner">
+            <p class="head"><img ng-src="{{data.workBenchDTO.logo}}" mr-img-convert imgw="1.9" imgh="1.9" /></p>
+            <p class="info">{{data.workBenchDTO.userName}}</p>
+        </div>
+        <div class="list card menuList">
+            <a href="/myPerformance" nav-direction="forward" class="item item-icon-left" ng-if="!showTabBaoan">
+                <i class="icon ion-data"></i><span class="handText">我的业绩</span>
+            </a>
+            <a href="/fitness" ng-click="changeNumber()" nav-direction="forward" class="item item-icon-left">
+                <i class="icon ion-commend"></i><span class="handText">我的投诉</span>
+                <!-- <span ng-if="data.workBenchDTO.countPraise>0" class="remindOne">{{data.workBenchDTO.countPraise}}</span> -->
+            </a>
+            <a href="/myRota" nav-direction="forward" class="item item-icon-left">
+                <i class="icon ion-contact"></i><span class="handText">我的值班表</span>
+            </a>
+            <div nav-direction="forward" class="item item-icon-left" ng-click="checkVersion()">
+                <i class="icon ion-version"></i><span class="handText">版本信息</span>
+                <div class="versionTwo">
+                    <span ng-if="data.workBenchDTO.version>version" class="remindTwo">
+                    </span class="handText">V {{version}}
+                </div>
+            </div>
+        </div>
+        <div class="list card menuList">
+            <div nav-direction="forward" class="item item-icon-left">
+                <i class="icon ion-quit"></i>
+                <div class="quit" ng-click="dropOut()"><span class="handText">退出登录</span></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view class="visivorPassageStyle">
+    <ion-content has-bouncing="false" scrollbar-y="false">
+        <div class="barcodeIcon" ng-click="barcode()"></div>
+        <div ng-if="showContent">
+            <div class="content">
+                <p>资料扫描成功,访客信息如下:</p>
+                <div class="headInfor">
+                    <span class="head">访客:</span>
+                    <span class="headContent">{{data.visitor}} {{data.sex}}</span>
+                    <br/>
+                    <span class="head">到访:</span>
+                    <span class="headContent">{{data.address}}</span>
+                    <br/>
+                    <span class="head">业主:</span>
+                    <span class="headContent">{{data.owner}}</span>
+                    <br/>
+                    <span class="head">访客车牌:</span>
+                    <span class="headContent">{{data.number}}</span>
+                    <br/>
+                    <span class="head">到访时间:</span>
+                    <span class="headContent">{{data.date}}</span>
+                    <br/>
+                </div>
+                <div class="footInfor">
+                    <span>同行:</span>
+                    <span>{{data.count}}人</span>
+                    <br/>
+                    <br/>
+                    <span>{{data.mobile}}</span>
+                </div>
+            </div>
+            <div class="release">
+                <div class="releaseIcon" ng-click="release()">
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

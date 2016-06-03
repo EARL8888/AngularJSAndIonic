@@ -1,0 +1,280 @@
+.LoginPagesStyle {
+    background: url(../images/login/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    .head {
+        background: url(../images/login/head.png) no-repeat;
+        background-size: 100%;
+        width: 1.73rem;
+        height: 1.73rem;
+        margin: auto;
+        margin-top: 2.5rem;
+    }
+    .list {
+        margin-top: 1rem;
+    }
+    .item-input {
+        border: 0;
+        width: 6.8rem;
+        height: .7rem;
+        margin: auto;
+        margin-bottom: .2rem;
+        background: url(../images/login/line_bg_02.png) no-repeat;
+        background-size: 100%;
+        padding: 0;
+        input {
+            color: #fff;
+            padding-left: .2rem;
+        }
+        .inputName {
+            background: rgba(150, 186, 220, 0.5);
+            width: 1.5rem;
+            height: .7rem;
+            display: inline-block;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            line-height: .7rem;
+            border-radius: .1rem 0 0 .1rem;
+            font-size: .28rem;
+        }
+        .inputNameRight {
+            background: rgba(240, 200, 140, 0.5);
+            width: 1.5rem;
+            height: .7rem;
+            display: inline-block;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            line-height: .7rem;
+            border-radius: 0 .1rem .1rem 0;
+            font-size: .28rem;
+        }
+    }
+    .pwd {
+        margin-bottom: .2rem;
+        height: .6rem;
+        width: 90%;
+        margin: auto;
+        clear: both;
+        .remPwd {
+            float: left;
+            a {
+                color: #fff;
+            }
+        }
+        .remPwd {
+            label {
+                display: inline-block;
+                background: none;
+                border-width: 0;
+            }
+            span {
+                font-size: .25rem;
+            }
+            .item-checkbox {
+                padding-left: 30px;
+                color: #fff;
+                .checkbox {
+                    left: 0;
+                    padding: 7px 0;
+                }
+            }
+            .checkbox-icon {
+                width: 15px;
+                height: 15px;
+                margin: 7px;
+            }
+            .checkbox-icon:after {
+                top: 26%;
+                left: 11%;
+                width: 12px;
+                height: 5px;
+            }
+        }
+        .forget {
+            float: right;
+            padding-top: 16px;
+            a {
+                color: #fff;
+                font-size: .24rem;
+            }
+        }
+    }
+    .button {
+        background: -o-linear-gradient(#3c82c1 5%, #025cad);
+        background: -ms-linear-gradient(#3c82c1 5%, #025cad);
+        background: linear-gradient(#3c82c1 5%, #025cad);
+        background: -moz-linear-gradient(top, #3c82c1, #025cad);
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#3c82c1), to(#025cad));
+        width: 6.8rem;
+        margin: auto;
+        color: #fff;
+        display: block;
+        border-radius: .15rem;
+        border: 0;
+    }
+    .link {
+        text-align: right;
+        width: 90%;
+        margin: auto;
+        margin-top: .3rem;
+        a {
+            color: #fff;
+            text-decoration: underline;
+            font-size: .3rem;
+        }
+    }
+    .copyright {
+        text-align: center;
+        font-size: .3rem;
+        margin-top: .6rem;
+        color: #fff;
+        span {
+            color: #F38432;
+        }
+    }
+}
+
+.slide-in-right {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-right.ng-enter,
+.slide-in-right > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-right.ng-enter-active,
+.slide-in-right > .ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-right.ng-leave,
+.slide-in-right > .ng-leave {
+    -webkit-transition: all ease-in-out 11ms;
+    transition: all ease-in-out 11ms;
+}
+
+.slide-in-left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.slide-in-left.ng-enter,
+.slide-in-left > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-left.ng-enter-active,
+.slide-in-left > .ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-left.ng-leave,
+.slide-in-left > .ng-leave {
+    -webkit-transition: all ease-in-out 11ms;
+    transition: all ease-in-out 11ms;
+}
+
+.slide-in-first {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.slide-in-first.ng-enter,
+.slide-in-first > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-first.ng-enter-active,
+.slide-in-first > .ng-enter-active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-first.ng-leave,
+.slide-in-first > .ng-leave {
+    -webkit-transition: all ease-in-out 11ms;
+    transition: all ease-in-out 11ms;
+}
+
+.ForgotPwdPageStyle {
+    background: url(../images/login/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #dddddd;
+    }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #dddddd;
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #dddddd;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: #dddddd;
+    }
+    .headLogin {
+        background: url(../images/login/head.png) no-repeat;
+        background-size: 100%;
+        width: 1.73rem;
+        height: 1.73rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .head {
+        background: url(../images/login/head.png) no-repeat;
+        background-size: 100%;
+        width: 1.73rem;
+        height: 1.73rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    .list {
+        margin-top: .4rem;
+        margin-bottom: .1rem;
+    }
+    .forgotForm {
+        .item-input {
+            background: url(../images/myMenu/pwd/input.png) no-repeat;
+            background-size: 100% 100%;
+            border: 0;
+            height: .7rem;
+            margin: 0 .3rem;
+            line-height: .7rem;
+            margin-bottom: .2rem;
+            padding-left: .2rem;
+            input {
+                color: #fff;
+            }
+        }
+        .vCode {
+            width: 1.5rem;
+            height: .7rem;
+            background: url(../images/myMenu/pwd/v_code.png) no-repeat center;
+            background-size: 1.5rem .7rem;
+            display: inline-block;
+            float: right;
+        }
+        .send {
+            width: 1.5rem;
+            height: .7rem;
+            font-size: .26rem;
+            color: #fff;
+            text-align: center;
+            background: url(../images/myMenu/pwd/send_bg.png) no-repeat center;
+            background-size: 1.5rem .7rem;
+            display: inline-block;
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+<ion-view class="IndexPageStyle" hide-nav-bar="true">
+    <ion-content has-bouncing="false" scrollbar-y="false" class="itm">
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list>
+            <div class="listBottomHeight">
+                <ion-item class="com_list" ng-repeat="item in data">
+                    <div ng-if="item.messageType==105 || item.messageType==106">
+                        <div>
+                            <div class="hardInfo">
+                                <span class="left" ng-class="{hong : item.messageTitle=='公区'||item.messageTitle=='户内',huang:item.messageTitle=='报污'}">[{{item.messageTitle}}] 工单单号： {{item.messagePropertId}}</span>
+                                <span class="right">{{getOwner(item.messageSenderName)}} {{item.messagePhone}}</span>
+                            </div>
+                            <div class="content">
+                                <span>{{ item.messageContent | characters:50}}</span>
+                            </div>
+                            <div class="infoBar">
+                                <p class="left">{{item.messageCreateTime}}</p>
+                                <p class="right">{{item.address}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="item.messageType==103" || ng-if="item.messageType==104">
+                        <!-- <a href="/workNoticeDetails/{{item.messageTargetId}}"> -->
+                        <div>
+                            <div class="hardInfo">
+                                <span class="left">{{item.messageTitle}}</span>
+                                <span class="right">{{item.messageCreateTime}}</span>
+                            </div>
+                            <div class="content">
+                                <span>{{ item.messageContent | characters:50}}</span>
+                            </div>
+                            <div class="infoBar">
+                                <p class="rightTwo">{{item.address}}</p>
+                            </div>
+                        </div>
+                        <!-- </a> -->
+                    </div>
+                    <ion-option-button class="button-positive" ng-click="delete($index,item.messageTargetId)">删除</ion-option-button>
+                </ion-item>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll ng-if="pageInfo.hasNextPage" on-infinite="loadMore()" distance="1%" immediate-check="false">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
