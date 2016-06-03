@@ -1,0 +1,2 @@
+# AngularJSAndIonic
+用angularjs和ionic创建的移动应用
